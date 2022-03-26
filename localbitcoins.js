@@ -26,7 +26,7 @@ function LBCClient(key, secret, otp) {
 		var methods = {
 			onlineAds: ['buy-bitcoins-online'],
 			public: ['countrycodes'],
-			private: ['ad-get', 'ad-get/ad_id', 'myself', 'ads',
+			private: ['ad-get', 'ad-get/ad_id', 'ad', 'ad-equation', 'wallet-balance', 'myself', 'ads',
 			'dashboard', 'dashboard/released', 'dashboard/canceled', 'dashboard/closed',
 			'dashboard/released/buyer', 'dashboard/canceled/buyer', 'dashboard/closed/buyer',
 			'dashboard/released/seller', 'dashboard/canceled/seller', 'dashboard/closed/seller',
@@ -126,8 +126,8 @@ function LBCClient(key, secret, otp) {
     var gets = ['ad-get', 'dashboard', 'dashboard/released', 'dashboard/canceled',
     'dashboard/closed', 'dashboard/released/buyer', 'dashboard/canceled/buyer',
     'dashboard/closed/buyer', 'dashboard/released/seller', 'dashboard/canceled/seller',
-    'dashboard/closed/seller', 'wallet', 'contact_info'];
-    var posts = [ 'ad-get/ad_id', 'myself', 'ads',
+    'dashboard/closed/seller', 'wallet', 'wallet-balance', 'contact_info'];
+    var posts = [ 'ad-get/ad_id', 'ad', 'ad-equation', 'myself', 'ads',
     'wallet-send', 'wallet-balance', 'wallet-addr'];
 
     if (posts.indexOf(method) !== -1) {

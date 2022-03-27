@@ -4,7 +4,7 @@ var querystring	= require('querystring');
 
 
 function LBCClient(key, secret, otp) {
-	var nonce = new Date() * 1000;
+	var nonce = new Date() * 100000;
 	var self = this;
 
 	var config = {
@@ -30,7 +30,7 @@ function LBCClient(key, secret, otp) {
 			'dashboard', 'dashboard/released', 'dashboard/canceled', 'dashboard/closed',
 			'dashboard/released/buyer', 'dashboard/canceled/buyer', 'dashboard/closed/buyer',
 			'dashboard/released/seller', 'dashboard/canceled/seller', 'dashboard/closed/seller',
-			'wallet-send', 'wallet', 'contact_info'
+			'wallet-send', 'wallet', 'contact_info', 'notifications'
 			]
 		};
 		if(methods.public.indexOf(method) !== -1) {
@@ -126,7 +126,7 @@ function LBCClient(key, secret, otp) {
     var gets = ['ad-get', 'dashboard', 'dashboard/released', 'dashboard/canceled',
     'dashboard/closed', 'dashboard/released/buyer', 'dashboard/canceled/buyer',
     'dashboard/closed/buyer', 'dashboard/released/seller', 'dashboard/canceled/seller',
-    'dashboard/closed/seller', 'wallet', 'wallet-balance', 'contact_info'];
+    'dashboard/closed/seller', 'wallet', 'wallet-balance', 'contact_info', 'notifications'];
     var posts = [ 'ad-get/ad_id', 'ad', 'ad-equation', 'myself', 'ads',
     'wallet-send', 'wallet-balance', 'wallet-addr'];
 
